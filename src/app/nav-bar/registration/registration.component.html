@@ -1,0 +1,106 @@
+
+<style>
+
+  #pg2 {
+    display: inline-block;
+    height: 1200px;
+    width: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/18/15/44/audience-1835431_960_720.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+
+  #form {
+    display: block;
+    background-color: rgb(144, 81, 245); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 200px;
+    padding: 30px;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+    #form h1 {
+      font-size: 30px;
+      text-align: center;
+      color: #fc179d;
+      font-family: 'Chewy', cursive;
+    }
+
+    #form input {
+      font-size: 20px;
+    }
+
+  #radio {
+    margin-left: 60px;
+  }
+
+  #submit {
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #2cb9e8;
+    margin-left: 300px;
+    margin-top: 60px;
+    border-radius: 8px;
+    /* cursor: pointer;*/
+    font-family: 'Chewy', cursive;
+  }
+
+
+</style>
+<div id="pg2">
+
+  <div id="form">
+    <form>
+      <br>
+      <h1> Registration Form </h1>
+      <br>
+      <br>
+      <label for="name">Name:</label>
+      <input type="text" id="fname" name="fname" placeholder="First Name" required>
+      <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+      <div id="error1" style="color: aliceblue;"></div>
+      <br>
+      <br>
+      <label>Email:<input type="email" name="email" placeholder="Email" id="email" required></label>
+      <br>
+      <br>
+      <label for="mobileno">MobileNo:<input type="text" placeholder="Mobile Number" name="mobileno" id="mobileno" maxlength="10" required></label>
+      <br>
+      <br>
+      <label>Sex:</label>
+      <div>
+        <form name="myform">
+          <label for="male"><input type="radio" id="male" name="gender" value="Male" required>Male</label><br>
+          <label for="female"><input type="radio" id="female" name="gender" value="Female" required>Female </label><br>
+          <label for="other"> <input type="radio" id="other" name="gender" value="Other" required>Other</label>
+        </form>
+      </div>
+
+      <br>
+      <label for="age">Age:  <input type="text" name="age" id="age" placeholder="age" min="5" max="90" maxlength="2" style="width: 40px;" required></label>
+
+      <br>
+      <br>
+      <label for="payment">Mode of Payment:</label>
+      <div id="radio">
+        <label for="NET Banking"><input type="radio" id="NET Banking" name="payment" value="NET Banking" required>NET Banking</label><br>
+        <label for="Paypal"><input type="radio" id="Paypal" name="payment" value="Paypal" required>Paypal </label><br>
+        <label for="CREDIT/DEBIT card" id="CREDIT/DEBIT card"><input type="radio" name="payment" value="CREDIT/DEBIT card" required>CREDIT/DEBIT card</label><br>
+        <label for="other"><input type="radio" id="UPI Apps" name="payment" value="UPI Apps" required>UPI Apps </label>
+      </div>
+      <br>
+      <br>
+      <button type="button" id="submit" onclick="showdetails()"> SUBMIT</button>
+
+
+    </form>
+  </div>
+
+</div>
