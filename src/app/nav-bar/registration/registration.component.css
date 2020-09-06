@@ -1,0 +1,52 @@
+#pg2 {
+  display: inline-block;
+  height: 2000px;
+  width: 100%;
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/18/15/44/audience-1835431_960_720.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+#form {
+  display: block;
+  background-color: rgb(144, 81, 245); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 200px;
+  padding: 30px;
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#lastname {
+  padding-left: 62px;
+}
+  #form h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #fc179d;
+    font-family: 'Chewy', cursive;
+  }
+
+  #form input {
+    font-size: 20px;
+  }
+
+#radio {
+  margin-left: 60px;
+}
+
+#submit {
+  font-size: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #2cb9e8;
+  margin-left: 300px;
+  margin-top: 60px;
+  border-radius: 8px;
+  /* cursor: pointer;*/
+  font-family: 'Chewy', cursive;
+}
