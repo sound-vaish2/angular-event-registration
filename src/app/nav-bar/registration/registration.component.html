@@ -1,80 +1,78 @@
+<!--Registration form-->
 <div id="pg2">
 
   <div [formGroup]="form" id="form">
-    <!-- <form name="form" > -->
+
     <br>
     <h1 style="text-align:center;"> Registration Form </h1>
     <br>
     <br>
 
-      <div class="form-group">
-      <label for="name" >Name:</label>
-      <input type="text" id="name" name="name" placeholder="Full Name" class="form-control" formControlName = "name" >
-      </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Full Name" class="form-control" formControlName="name">
+    </div>
+    <br>
 
-      <br>
-      <br>
-
-      <div class="form-group">
+    <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" name="email" placeholder="Email" id="email"class="form-control" formControlName = "email" >
+      <input type="email" name="email" placeholder="Email" id="email" class="form-control" formControlName="email">
       <br>
-      <div class="form-group" >
-      <label for="mobileno">MobileNo:</label>
-      <input type="text" placeholder="Mobile Number" name="mobileno" id="mobileno" maxlength="10" class="form-control" formControlName = "mobileno">
-      <br>
+      <div class="form-group">
+        <label for="mobileno">MobileNo:</label>
+        <input type="text" placeholder="Mobile Number" name="mobileno" id="mobileno" maxlength="10" class="form-control" formControlName="mobileno">
+        <br>
 
-      <!-- <label>Sex:</label>
-      <div>
-        <form name="myform">
-          <label for="male"><input type="radio" id="male" name="gender" value="true" required class="form-control" >Male</label><br>
-          <label for="female"><input type="radio" id="female" name="gender" value="false" required class="form-control" >Female </label><br>
-          <label for="other"> <input type="radio" id="other" name="gender" value="false" required class="form-control" >Other</label>
-        </form>
-      <br> -->
-      <br>
-      <div class="form-group" >
-      <label for="age">Age:
-      <input type="text" name="age" id="age" placeholder="age" min="5" max="90" maxlength="2" style="width: 70px;" class="form-control" formControlName = "age"></label>
-      <!-- <br>
-      <span class="help-block" *ngIf="age.invalid && age.touched " style="padding-left:50px; color:red;">Enter your Age</span> -->
+        <!-- <label>Sex:</label>
+        <div>
+          <form name="myform">
+            <label for="male"><input type="radio" id="male" name="gender" value="true" required class="form-control" >Male</label><br>
+            <label for="female"><input type="radio" id="female" name="gender" value="false" required class="form-control" >Female </label><br>
+            <label for="other"> <input type="radio" id="other" name="gender" value="false" required class="form-control" >Other</label>
+          </form>
+        <br> -->
+        <br>
+        <div class="form-group">
+          <label for="age">
+            Age:
+            <input type="text" name="age" id="age" placeholder="age" min="5" max="90" maxlength="2" style="width: 70px;" class="form-control" formControlName="age">
+          </label>
+          <!-- <br>
+          <span class="help-block" *ngIf="age.invalid && age.touched " style="padding-left:50px; color:red;">Enter your Age</span> -->
+        </div>
+        <br>
+
+
+        <button type="button" id="submit" type="submit" [disabled]="form.invalid" (click)=submit()>SUBMIT</button>
       </div>
-      <br>
 
+    </div>
+    <!-- <div class="form-group" [class.has-error] = "name.invalid && name.touched">
+    <label for="name" class="control-label" >Name:</label>
+    <input type="text" id="name" name="name" placeholder="Full Name" required class="form-control" formControlName = "name" >
+    <br>
+    <span class="help-block" *ngIf="name.invalid && name.touched" style="padding-left:62px; color:red;">Name is required</span>
+    </div> -->
+    <!-- <br> -->
+    <!-- <div class="form-group" [class.has-error] = "fname.invalid && fname.touched" id="lastname">
+    <input type="text"id="lname" name="lname" placeholder="Last Name" required class="form-control" ngModel #lname = "ngModel">
+    <br>
+    <span class="help-block" *ngIf="lname.invalid && lname.touched" style="color:red;">Last name is required</span>
+    </div>
+    <div id="error1" style="color: aliceblue;"></div> -->
+    <!-- <div class="form-group" [class.has-error] = "email.invalid && email.touched">
+    <label for="email" class="control-label">Email:</label>
+    <input type="email" name="email" placeholder="Email" id="email" required class="form-control" formControlName = "email" >
+    <br>
+    <span class="help-block" *ngIf="email.invalid && email.touched" style="padding-left:62px; color:red;">Email is required</span>
+    </div> -->
+    <!-- <span class="help-block" *ngIf="!male.untouched && !female.untouched && !other.untouched" style="padding-left:90px; color:red;">Select the options above</span> -->
+    <!-- </div
 
-      <button type="button" id="submit"  type="submit" [disabled]="form.invalid" (click)=submit()>SUBMIT</button>
-  </div>
+    <!-- <div class="form-group" [class.has-error] = "mobileno.invalid && mobileno.touched">
+    <label for="mobileno" class="control-label">MobileNo:</label>
+    <input type="text" placeholder="Mobile Number" name="mobileno" id="mobileno" maxlength="10" required class="form-control" ngModel #mobileno = "ngModel">
+    <br>
 
-</div>
-<!-- <div class="form-group" [class.has-error] = "name.invalid && name.touched">
-<label for="name" class="control-label" >Name:</label>
-<input type="text" id="name" name="name" placeholder="Full Name" required class="form-control" formControlName = "name" >
-<br>
-<span class="help-block" *ngIf="name.invalid && name.touched" style="padding-left:62px; color:red;">Name is required</span>
-</div> -->
-
-<!-- <br> -->
-<!-- <div class="form-group" [class.has-error] = "fname.invalid && fname.touched" id="lastname">
-<input type="text"id="lname" name="lname" placeholder="Last Name" required class="form-control" ngModel #lname = "ngModel">
-<br>
-<span class="help-block" *ngIf="lname.invalid && lname.touched" style="color:red;">Last name is required</span>
-</div>
-<div id="error1" style="color: aliceblue;"></div> -->
-
-<!-- <div class="form-group" [class.has-error] = "email.invalid && email.touched">
-<label for="email" class="control-label">Email:</label>
-<input type="email" name="email" placeholder="Email" id="email" required class="form-control" formControlName = "email" >
-<br>
-<span class="help-block" *ngIf="email.invalid && email.touched" style="padding-left:62px; color:red;">Email is required</span>
-</div> -->
-
-<!-- <span class="help-block" *ngIf="!male.untouched && !female.untouched && !other.untouched" style="padding-left:90px; color:red;">Select the options above</span> -->
-<!-- </div
-
-<!-- <div class="form-group" [class.has-error] = "mobileno.invalid && mobileno.touched">
-<label for="mobileno" class="control-label">MobileNo:</label>
-<input type="text" placeholder="Mobile Number" name="mobileno" id="mobileno" maxlength="10" required class="form-control" ngModel #mobileno = "ngModel">
-<br>
-
-<span class="help-block" *ngIf="mobileno.invalid && mobileno.touched" style="padding-left:90px; color:red;">Mobile Number is required</span>
-</div> -->
+    <span class="help-block" *ngIf="mobileno.invalid && mobileno.touched" style="padding-left:90px; color:red;">Mobile Number is required</span>
+    </div> -->

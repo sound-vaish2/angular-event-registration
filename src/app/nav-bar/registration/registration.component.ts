@@ -8,10 +8,10 @@ import {Router , ActivatedRoute} from '@angular/router';// <== add the imports!
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  form:any;
+  form:any; //variable form with any type
   constructor(
     private router:Router,
-    private route:ActivatedRoute
+    private route:ActivatedRoute   
   ) {
     this.form = new FormGroup(
       {
@@ -23,20 +23,24 @@ export class RegistrationComponent implements OnInit {
       }
     )
   }
+  
+  ngOnInit(): void{}
+  submit()                                //on submit
+  {
+    let data:any = this.form.value;     // form value is stored in variable data
+    this.router.navigate(['./details'],{
+      queryParams:{data:JSON.stringify(data)}     // this means we are navigating to other page with passing the parameters
+    })                    //JSON stringify method converts JavaScript object or value to a JSON string.
+  }
+
+
+
   //Firstname = fname;
   // details = new object()
   // details.Name = fname;
   // details.Email = email;
   //
   //submitted : boolean = false;
-  ngOnInit(): void{}
-  submit()
-  {
-    let data:any = this.form.value;
-    this.router.navigate(['./details'],{
-      queryParams:{data:JSON.stringify(data)}
-    })
-  }
   //
   // var  onSubmit() => {
   //      this.submitted = true;

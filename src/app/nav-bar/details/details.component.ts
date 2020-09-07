@@ -16,8 +16,9 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
-    this.data=JSON.parse(params.data);
+    this.data=JSON.parse(params.data);      //converting back to JSON object
     })
+
     // firstNameofbuyer = person.firstname;
     // lastNameofbuyer = person.lastname;
   }

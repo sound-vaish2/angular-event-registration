@@ -1,6 +1,43 @@
 <div id="pg3">
 
-  <!-- <table id="table">
+
+  <div id="print-section">
+    <div class="ticket ticket-1">
+
+      <div class="date">
+        <span class="day">31</span>
+        <span class="month-and-time">OCT<br><span class="small">8PM</span></span>
+      </div>
+
+      <div class="artist">
+        <span class="name">PRATIK KUHAD</span>
+        <br>
+        <span class="live small">LIVE</span>
+      </div>
+
+      <div class="location">
+        <div class="user-name" style="font-size: 20px;">Name: {{data.name}}</div>
+        <div class="user-name" style="font-size: 20px; ">Age : {{data.age}}</div>
+        <div class="user-name" style="font-size: 20px; ">MobileNo: {{data.mobileno}}</div>
+        <!-- <div class="user-name" style="font-size: 20px;">Paid!</div> -->
+        <!-- <span>KINGSTON TOWN</span>
+        <br>
+        <span class="small">NANCY'S PUB</span> -->
+      </div>
+
+      <div class="rip">
+      </div>
+
+    </div>
+  </div>
+  <div class="cta" style="margin-left: 600px;">
+    <button class="buy" href="#" printSectionId="print-section" ngxPrint [useExistingCss]="true">PRINT TICKET</button>
+  </div>
+</div>
+
+
+
+<!-- <table id="table">
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
@@ -10,50 +47,5 @@
       <th>Sex</th>
       <th>Payment mode</th>
     </tr> -->
-
-  <!-- </table> -->
-  <!-- <div id="box-container"> -->
-<div id="print-section">
-  <div class="ticket ticket-1" >
-
-  <div class="date">
-    <span class="day">31</span>
-    <span class="month-and-time">OCT<br><span class="small">8PM</span></span>
-  </div>
-
-  <div class="artist">
-    <span class="name">PRATIK KUHAD</span>
-    <br>
-    <span class="live small">LIVE</span>
-  </div>
-
-  <div class="location">
-    <div class="user-name" style="font-size: 20px;">Name: {{data.name}}</div>
-    <div class="user-name" style="font-size: 20px; ">Age : {{data.age}}</div>
-    <div class="user-name" style="font-size: 20px; ">MobileNo: {{data.mobileno}}</div>
-    <!-- <div class="user-name" style="font-size: 20px;">Paid!</div> -->
-    <!-- <span>KINGSTON TOWN</span>
-    <br>
-    <span class="small">NANCY'S PUB</span> -->
-  </div>
-
-  <div class="rip">
-  </div>
-
-
-
-<!-- </div> -->
-
-    <!-- <h1>POPZILA</h1>
-    <div id="user-info">
-    <span>Full Name:    {{data.name}}</span>
-    <br>
-    <span>Email:    {{data.email}}</span>
-    </div>
-    <!-- <button type="button" name="button" >Print</button> -->
-  </div>
-</div>
-  <div class="cta" style="margin-left: 600px;">
-    <button class="buy" href="#" printSectionId="print-section" ngxPrint  [useExistingCss]="true">PRINT TICKET</button>
-  </div>
-</div>
+<!-- </table> -->
+<!-- <div id="box-container"> -->

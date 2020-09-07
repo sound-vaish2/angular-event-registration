@@ -6,10 +6,11 @@ import { HomeComponent } from './nav-bar/home/home.component';
 import { RegistrationComponent } from './nav-bar/registration/registration.component';
 import { DetailsComponent } from './nav-bar/details/details.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormGroup, FormControl, Validators} from '@angular/forms'
-import { FormsModule,ReactiveFormsModule } from '@angular/forms'; // <== add the imports!
-import {NgxPrintModule} from 'ngx-print';
+import { FormGroup, FormControl, Validators} from '@angular/forms' //<= Validators
+import { FormsModule,ReactiveFormsModule } from '@angular/forms'; // <== add the imports!, for forms
+import {NgxPrintModule} from 'ngx-print'; //for print command
 @NgModule({
+  //declaration are where component are declare
   declarations: [
     AppComponent,
     HomeComponent,
@@ -18,6 +19,7 @@ import {NgxPrintModule} from 'ngx-print';
     FooterComponent,
 
   ],
+  //imports => modules are declared here
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,7 +27,9 @@ import {NgxPrintModule} from 'ngx-print';
     ReactiveFormsModule,
     NgxPrintModule
   ],
+  //providers => services are declare here
   providers: [],
+  //in bootstrap the main component is declared
   bootstrap: [AppComponent]
 })
 export class AppModule { }
