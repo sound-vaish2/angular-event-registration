@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\footer",
+    "\\src\\app\\nav-bar",
+    "\\src\\app\\nav-bar\\home",
+    "\\src\\app\\nav-bar\\registration"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\src\\app\\nav-bar\\home\\home.component.html",
   "PreviewInSolutionExplorer": false
 }
